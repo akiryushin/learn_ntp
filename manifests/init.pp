@@ -1,7 +1,7 @@
 # Manage NTP
 class learn_ntp (
   Boolean $start_at_boot,
-  String $version                           = 'installed',
+  String[1] $version                           = 'installed',
   Enum['running', 'stopped'] $service_state = 'running',
 ) {
   ensure_packages(['ntp'],
