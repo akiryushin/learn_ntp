@@ -10,7 +10,7 @@ class learn_ntp (
     })
 
   file { '/etc/ntp.conf':
-    source => 'puppet://modules/learn_ntp/files/ntp.conf',
+    source => 'puppet:///modules/learn_ntp/ntp.conf',
     notify => Service['ntp'],
     require => Package['ntp'],
   }
